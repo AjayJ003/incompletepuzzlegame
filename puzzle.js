@@ -127,12 +127,6 @@ var splitImages = [];
        var img = new Image();
        img.src = e.target.result;
        img.onload = function() {
-         var canvas = document.createElement('canvas');
-         var ctx = canvas.getContext('2d');
-         var width = img.width / 3;
-         var height = img.height / 3;
-         canvas.width = width;
-         canvas.height = height;
    
          for (var i = 0; i < 9; i++) {
            var x = (i % 3) * width;
