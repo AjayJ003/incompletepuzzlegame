@@ -132,7 +132,6 @@ var splitImages = [];
            var x = (i % 3) * width;
            var y = Math.floor(i / 3) * height;
            ctx.drawImage(img, x, y, width, height, 0, 0, width, height);
-           var splitImage = canvas.toDataURL('image/jpeg');
            localStorage.setItem('splitImage' + i, splitImage);
            splitImages[i] = splitImage;
            var imageElement = document.createElement('img');
