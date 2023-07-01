@@ -127,11 +127,14 @@ var splitImages = [];
        var img = new Image();
        img.src = e.target.result;
        img.onload = function() {
+         
+         var width = img.width / 3;
+         var height = img.height / 3;
+        
    
          for (var i = 0; i < 9; i++) {
            var x = (i % 3) * width;
            var y = Math.floor(i / 3) * height;
-           ctx.drawImage(img, x, y, width, height, 0, 0, width, height);
            localStorage.setItem('splitImage' + i, splitImage);
            splitImages[i] = splitImage;
            var imageElement = document.createElement('img');
